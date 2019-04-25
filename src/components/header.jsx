@@ -18,20 +18,24 @@ export default class Header extends Component {
     return (
       
       <div >
-        <Navbar style={{ backgroundColor: "Green" }} color="faded" light expand="md">
+        <Navbar style={{ backgroundColor: " black" }} color="faded" light expand="md">
           <NavbarBrand href="/" className="mr-auto">
+          <img src="https://jurnalapps.co.id/assets/img/content/1492358786_go-food-1.jpg" width="50%"></img>
             <h1
               style={{
                 fontFamily: "Times New Roman",
                 fontWeight: "bold",
                 color: "white"
                 }}>
-              Go Food
+              
             </h1>
-            <NavItem>
-                <NavLink href="/dashboard/">Menu</NavLink>
-            </NavItem>
+           
             
+          </NavbarBrand>
+          <NavbarBrand>
+          <Button outline color="success" href="/">Home</Button>{' '}
+          <Button outline color="success" href="/dashboard">Menu</Button>{' '}
+              
           </NavbarBrand>
         </Navbar>
         

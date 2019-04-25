@@ -59,14 +59,16 @@ state={
 tambahTotalHarga= harga =>{
   this.setState({
     total: this.state.total + harga
-  })
-}
+  });
+  sessionStorage.total = this.state.total + harga;
+};
 
 kurangTotalHarga= harga =>{
   this.setState({
     total: this.state.total - harga
-  })
-}
+  });
+  sessionStorage.total = this.state.total - harga;
+};
   render() {
     return (
       <div align="center">
@@ -88,8 +90,11 @@ kurangTotalHarga= harga =>{
         <Jumbotron fluid>
         <p> Total Harga </p>
         <h2 align="center">{this.state.qty}</h2>
-        <p>{this.state.total}</p>
-        <Button tag={Link} to="." color="primary">Back To Home</Button>
+        <p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlz8lzPKDvLHC_xlou9dXw2S9e0x05ZgER8FDEK9IeUjx05QQm" width="2.5%"/>
+            Rp.{this.state.total}
+        </p>
+        <Button tag={Link} to="./payment" color="success" size="lg" block>Order</Button>
       </Jumbotron>
         {/* <Row>
         <Col xs="6"><Counter menu="Mie Rebus" gambar="http://cdn2.tstatic.net/manado/foto/bank/images/mi-instan_20180508_073137.jpg" ukuran={{ width: "100%" }}/></Col>
